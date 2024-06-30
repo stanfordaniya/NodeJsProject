@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Chat Application</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <style>
+      body {
+        font-family: "Balthazar", serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #751662;
+      }
+      .balthazar-regular {
+        font-family: "Balthazar", serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+      .chat-container {
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 90%;
+        max-width: 500px;
+        padding: 20px;
+        text-align: center;
+      }
+      .chat-title {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        font-family: "Balthazar", serif;
+      }
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        max-height: 300px;
+        overflow-y: auto;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        padding: 10px;
+        background-color: #f9f9f9;
+        text-align: left;
+        display: none; /* Hide initially */
+      }
+      li {
+        padding: 8px;
+        margin-bottom: 10px;
+        background-color: #f4f4f4;
+        border-radius: 4px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .message-text {
+        flex: 1;
+      }
+      .message-time {
+        color: #888;
+        font-size: 0.8em;
+        margin-left: 5px;
+      }
+      form {
+        display: flex;
+        margin-top: 10px;
+      }
+      input {
+        padding: 10px;
+        width: 100%;
+        border: 1px solid #ddd;
+        border-radius: 4px 0 0 4px;
+        box-sizing: border-box;
+      }
+      button {
+        padding: 10px;
+        background-color: #000000;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #751662;
+      }
+      #username-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+      #username {
+        padding: 10px;
+        width: 80%;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        margin-bottom: 10px;
+      }
+      #exit {
+        padding: 10px;
+        background-color: #dc3545;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-top: 10px;
+      }
+      #exit:hover {
+        background-color: #c82333;
+      }
+      #clear {
+        padding: 10px;
+        background-color: #6c757d;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-top: 10px;
+      }
+      #clear:hover {
+        background-color: #5a6268;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="chat-container">
+      <div class="chat-title">The Local Chat Room by Aniya Stanford</div>
+      <form id="username-form">
+        <input id="username" type="text" placeholder="Enter your name" required />
+        <button type="submit">Join Chat</button>
+      </form>
+      <ul id="messages"></ul>
+      <form id="form" action="" style="display:none;">
+        <input id="input" autocomplete="off" placeholder="Type your message here..." /><button>Send</button>
+      </form>
+      <button id="exit" style="display:none;">Exit Chat</button>
+      <button id="clear" style="display:none;">Clear Chat</button>
+    </div>
+
+    <!-- Include Socket.io client library -->
+    <script src="/socket.io/socket.io.js"></script>
+    <!-- Include main JavaScript file -->
+    <script src="main.js"></script>
+  </body>
+</html>
+ 
