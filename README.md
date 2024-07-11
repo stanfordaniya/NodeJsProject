@@ -20,8 +20,22 @@ This project is private local chat room.
     ```bash
    npm install
 
+## Screenshots
+
+### Interface:
+<img src="images/imgtwo.png" alt="Example One" width="800">
+
+### Joining Chat:
+<img src="images/imgfour.png" alt="Example Two" width="800">
+
+### Example:
+<img src="images/imgthree.png" alt="Example Three" width="800">
+
+### Example of Leaving Chat:
+<img src="images/imgone.png" alt="Cleared Chat" width="800">
+
 ## Usage
-My portfolio is designed to be simple and user-friendly chat room that allows you to see who joins, leave, timestamps, users and the ability to clear your chat.
+This is a simple private chat room.
 
 ## Contributing
-If you have any ideas for improvements or new sections that could be added to the portfolio, feel free to share insight. Constructive feedback and ideas are always appreciated.
+If you have any ideas for improvements or new sections that could be added to the chat room, feel free to share insight. Constructive feedback and ideas are always appreciated.
