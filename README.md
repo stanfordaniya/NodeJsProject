@@ -1,4 +1,4 @@
-# Web Development Milestone 3203
+# Local Private Chat Room
 
 ## Description
 This project is private local chat room.
